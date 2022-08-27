@@ -2,7 +2,7 @@ import 'dotenv/config'
 
 export default {
   "expo": {
-    "name": "you-n-me",
+    "name": "Un'Me",
     "slug": "you-n-me",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,7 +10,7 @@ export default {
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -26,7 +26,8 @@ export default {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.eleven.you-n-me",
     },
     "web": {
       "favicon": "./assets/favicon.png"
