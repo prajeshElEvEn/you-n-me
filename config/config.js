@@ -2,7 +2,6 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
-import { getAnalytics } from "firebase/analytics"
 import Constants from "expo-constants"
 
 const firebaseConfig = {
@@ -17,5 +16,4 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig)
 export const auth = getAuth()
-export const db = getFirestore()
-export const analytics = getAnalytics()
+export const firestore = getFirestore()

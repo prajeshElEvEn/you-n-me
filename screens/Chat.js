@@ -1,14 +1,8 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
+import { GiftedChat } from 'react-native-gifted-chat'
 
-export class Chat extends Component {
-    render() {
-        return (
-            <View>
-                <Text>Chat</Text>
-            </View>
-        )
-    }
+export default function Chat() {
+    return (
+        <GiftedChat />
+    )
 }
-
-export default Chat
