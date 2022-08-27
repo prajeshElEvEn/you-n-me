@@ -1,4 +1,6 @@
-# You&Me
+# Un'Me
+
+`for someone special✨`
 
 One to one android texting app.
 
