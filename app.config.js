@@ -27,7 +27,7 @@ export default {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.eleven.you-n-me",
+      "package": "com.eleven.younme",
     },
     "web": {
       "favicon": "./assets/favicon.png"
