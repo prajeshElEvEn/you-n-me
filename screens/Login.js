@@ -47,8 +47,17 @@ export default function Login({ navigation }) {
                     style={styles.button}
                     onPress={handleLogin}
                 >
-                    <Text></Text>
+                    <Text style={{ fontSize: 18, fontWeight: '900', color: '#fff' }}>Login</Text>
                 </TouchableOpacity>
+                <View style={{ justifyContent: 'center', flexDirection: 'row', marginTop: 8 }}>
+                    <Text>Don't have an account?</Text>
+                    <TouchableOpacity
+                        style={{ marginLeft: 4 }}
+                        onPress={() => navigation.navigate('Register')}
+                    >
+                        <Text style={{ fontWeight: '700', color: '#6c63ff' }}>Register</Text>
+                    </TouchableOpacity>
+                </View>
             </SafeAreaView>
         </View>
     )
@@ -58,6 +67,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        justifyContent: 'center',
     },
     loginBox: {
         marginHorizontal: 32,
@@ -75,6 +85,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#f6f7fb',
     },
     button: {
-
+        backgroundColor: '#6c63ff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        marginVertical: 8,
+        borderRadius: 10,
     }
 })
