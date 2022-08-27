@@ -9,13 +9,19 @@ export default function Login({ navigation }) {
 
     const handleLogin = () => {
         if (email && password) {
-            signInWithEmailAndPassword(auth, email, password)
-                .then(() => {
-                    // console.log('Login success')
-                })
-                .catch((err) => {
-                    Alert.alert("Login error", err.message)
-                })
+            if (password.length >= 8) {
+                signInWithEmailAndPassword(auth, email, password)
+                    .then(() => {
+                        // console.log('Login success')
+                    })
+                    .catch((err) => {
+                        Alert.alert("Login error", "Unable to login.")
+                    })
+            } else {
+                Alert.alert("Warning!", "Password must be at least 8 characters.")
+            }
+        } else {
+            Alert.alert("Warning!", "Please fill in all fields.")
         }
     }
 

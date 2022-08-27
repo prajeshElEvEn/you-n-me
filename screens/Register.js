@@ -14,8 +14,10 @@ export default function Register({ navigation }) {
                     // console.log('Registration success')
                 })
                 .catch((err) => {
-                    Alert.alert("Login error", err.message)
+                    Alert.alert("Error!", "Unable to register.")
                 })
+        } else {
+            Alert.alert("Warning!", "Please fill in all fields.")
         }
     }
 
