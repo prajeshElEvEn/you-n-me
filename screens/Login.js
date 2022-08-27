@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
         if (email && password) {
             signInWithEmailAndPassword(auth, email, password)
                 .then(() => {
-                    console.log('Login success')
+                    // console.log('Login success')
                 })
                 .catch((err) => {
                     Alert.alert("Login error", err.message)
@@ -29,7 +29,7 @@ export default function Login({ navigation }) {
                     autoCapitalize="none"
                     keyboardType='email-address'
                     textContentType='emailAddress'
-                    autoFocus={true}
+                    // autoFocus={true}
                     value={email}
                     onChangeText={(text) => setEmail(text)}
                 ></TextInput>

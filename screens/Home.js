@@ -1,24 +1,27 @@
 import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { FontAwesome, Entypo } from '@expo/vector-icons'
 
-const Home = () => {
+export default function Home() {
     const navigation = useNavigation()
 
     useEffect(() => {
         navigation.setOptions({
-            headerLeft: () => {
-                <FontAwesome name="search" size={24} color='#000' style={{ marginLeft: 15 }} />
-            },
-            headerRight: () => {
+            headerLeft: () => (
+                <FontAwesome name={'search'}
+                    size={22}
+                    color={'#000'}
+                    style={{ marginLeft: 15 }} />
+            ),
+            headerRight: () => (
                 <Image
                     source={require('../assets/user.png')}
-                    style={{ width: 50, height: 50, marginRight: 15 }}
+                    style={{ marginRight: 15 }}
                 />
-            }
+            )
         })
-    }, [nav])
+    }, [navigation])
 
 
     return (
@@ -29,18 +32,18 @@ const Home = () => {
                 }}
                 style={styles.chatButton}
             >
-                <Entypo name='chat' size='24' color='#000' />
+                <Entypo name='chat' size={24} color='#fff' />
             </TouchableOpacity>
         </View>
     )
 }
 
-export default Home
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
     },
     chatButton: {
         backgroundColor: '#6c63ff',
@@ -49,6 +52,8 @@ const styles = StyleSheet.create({
         borderRadius: 50 / 2,
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: 20,
+        marginRight: 20,
     }
 })
 
