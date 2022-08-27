@@ -11,7 +11,7 @@ export default function Register({ navigation }) {
         if (email && password) {
             createUserWithEmailAndPassword(auth, email, password)
                 .then(() => {
-                    console.log('Registration success')
+                    // console.log('Registration success')
                 })
                 .catch((err) => {
                     Alert.alert("Login error", err.message)
