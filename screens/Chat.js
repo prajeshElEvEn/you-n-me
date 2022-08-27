@@ -65,6 +65,7 @@ export default function Chat() {
                 backgroundColor: '#fff',
             }}
             showAvatarForEveryMessage={false}
+            placeholder='Type something 🙈'
         />
     )
 }

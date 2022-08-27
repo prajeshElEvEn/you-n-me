@@ -7,7 +7,6 @@ import { onAuthStateChanged } from "firebase/auth"
 import Chat from "./screens/Chat"
 import Login from "./screens/Login"
 import Register from "./screens/Register"
-// import Home from "./screens/Home"
 import { auth } from "./config/config"
 
 const Stack = createStackNavigator()
@@ -27,7 +26,6 @@ const AuthenticatedUserProvider = ({ children }) => {
 const ChatStack = () => {
   return (
     <Stack.Navigator defaultScreenOptions={Chat}>
-      {/* <Stack.Screen name="Home" component={Home} /> */}
       <Stack.Screen name="Chat" component={Chat} />
     </Stack.Navigator>
   )
